@@ -1,5 +1,4 @@
 # Toughts
-![maintenance-status](https://img.shields.io/badge/maintenance-experimental-blue.svg)
 
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
@@ -11,11 +10,12 @@
 É um projeto do curso de Node.js do "Hora de codar" que aborda os tópicos principais de um projeto web, como: autenticação, login, controle de sessão e interface de interação com o usuário seguindo o padrão arquitetural MVC.
 
 ### Pre requisitos
-Para este projeto é necessário ter o git, node e MySQL instalados.
+Para este projeto é necessário ter o Git, Node.js e MySQL instalados e criar o banco de dados em sua máquina... 
+```bash
+CREATE DATABASE toughts;
+```
 
-## Instrução de instalação (Setup)
-Caso for clonar o projeto em sua máquina, apenas coloque o seguinte comando na pasta do projeto...
-
+## Caso for clonar o projeto em sua máquina, apenas coloque o seguinte comando na pasta do projeto...
 ```bash
 npm install
 ```
@@ -30,7 +30,7 @@ touch index.js
 Views e public possuem subpastas...
 ```bash
 cd public
-mkdir css
+mkdir css img
 ``` 
 ```bash
 cd views
