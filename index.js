@@ -11,6 +11,10 @@ const conn = require('./db/conn');
 // Models
 const Tought = require('./models/Tought');
 const User = require('./models/User');
+// Import Routes
+const toughtsRoutes = require('./routes/toughtsRoutes');
+// Import Controller
+const ToughtController = require('./controllers/ToughtController');
 
 // template engine
 app.engine('handlebars', exphbs.engine());
@@ -45,14 +49,20 @@ app.use(flash());
 app.use(express.static('public'));
 // set session to res
 app.use((req, res, next) => {
-    if(res.session.userid){
+    if(req.session.userid){
         res.locals.session = req.session;
     }
     next();
-})
+});
+
+// Routes
+app.use('toughts', toughtsRoutes);
+
+app.use('/', ToughtController.showToughts);
+
 conn
     //.sync({ force: true })
-    .sync({ force: true })
+    .sync()
     .then(() => {
         app.listen(3000);
     })
