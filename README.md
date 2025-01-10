@@ -19,6 +19,13 @@ CREATE DATABASE toughts;
 ```bash
 npm install
 ```
+## Para testar o projeto...
+...cone o projeto ou faça o download ZIP e descompacte a pasta, abra a pasta do projeto e dê o comando anterior para instalar as dependências. 
+Após isso dê o comando:
+```bash
+npm start
+```
+e abra o navegador no http://localhost:3000/
 
 ## Caso queira começar do zero e seguir commit um a um
 Coloque o seguinte comando na pasta do projeto...
